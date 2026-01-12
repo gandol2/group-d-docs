@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group-D 사용자 메뉴얼</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      color: white;
+      margin-bottom: 40px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      opacity: 0.9;
+      font-size: 1.1rem;
+    }
+    .projects {
+      display: grid;
+      gap: 20px;
+    }
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+    }
+    .project-card h2 {
+      color: #5056dc;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+    .project-card .tag {
+      display: inline-block;
+      background: #f0f0ff;
+      color: #5056dc;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+    }
+    .project-card p {
+      color: #666;
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      color: white;
+      margin-top: 40px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Group-D</h1>
+      <p>프로젝트 사용자 메뉴얼</p>
+    </header>
+
+    <div class="projects">
+      <a href="./naver-ad-automation/" class="project-card">
+        <span class="tag">GD-ADC</span>
+        <h2>광고집행 데이터 통합 수집 시스템</h2>
+        <p>네이버 광고 계정의 비즈머니 잔액을 조회하고 데이터를 Excel/JSON으로 내보내는 데스크톱 애플리케이션입니다.</p>
+      </a>
+
+      <!-- 추후 다른 프로젝트 추가
+      <a href="./kda-review-monitor/" class="project-card">
+        <span class="tag">GD-KRM</span>
+        <h2>KDA 리뷰 모니터</h2>
+        <p>프로젝트 설명</p>
+      </a>
+      -->
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Group-D. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

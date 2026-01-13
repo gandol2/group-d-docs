@@ -678,16 +678,42 @@
         <li>상태 또는 승인번호가 다시 변경되면 새로운 알림 발송</li>
       </ul>
 
-      <h3>알림 형식</h3>
-      <p>Slack 메시지 예시:</p>
-      <code>[2일 전 데이터 대비] 서울치과의원 (REV-2024-001): 심의 중 → 승인</code>
+      <h3>테스트 메시지</h3>
+      <p>설정 화면에서 <strong>연결 테스트</strong> 버튼을 클릭하면 다음과 같은 테스트 메시지가 발송됩니다:</p>
 
-      <p>날짜 정보 프리픽스:</p>
-      <ul>
-        <li>스냅샷이 오늘 생성된 경우: 프리픽스 없음</li>
-        <li>스냅샷이 어제 생성된 경우: <code>[어제 데이터 대비]</code></li>
-        <li>스냅샷이 2일 이상 지난 경우: <code>[N일 전 데이터 대비]</code></li>
-      </ul>
+      <div class="screenshot">
+        <img src="images/07-slak-test-message.png" alt="Slack 테스트 메시지">
+      </div>
+
+      <h3>실제 알림 형식</h3>
+      <p>상태 변경이 감지되면 다음과 같은 형식으로 알림이 발송됩니다:</p>
+
+      <div class="screenshot">
+        <img src="images/07-slak-real-message.png" alt="Slack 실제 알림 메시지">
+      </div>
+
+      <table>
+        <tr>
+          <th>항목</th>
+          <th>설명</th>
+        </tr>
+        <tr>
+          <td>변경 건수</td>
+          <td>상태가 변경된 심의 항목 수</td>
+        </tr>
+        <tr>
+          <td>감지 시간</td>
+          <td>변경을 감지한 시간 (현재 수집 시간)</td>
+        </tr>
+        <tr>
+          <td>변경 목록</td>
+          <td>변경된 각 항목의 심의번호, 병원명, 이전→현재 상태</td>
+        </tr>
+        <tr>
+          <td>하단 시간 정보</td>
+          <td>이전 수집 시간과 현재 수집 시간 비교 안내</td>
+        </tr>
+      </table>
 
       <div class="info-box warning">
         <strong>주의</strong>

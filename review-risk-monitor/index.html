@@ -290,7 +290,7 @@
       <ol>
         <li>화면에 표시된 <strong>32자리 Machine Key</strong>를 복사합니다</li>
         <li>관리자에게 키를 전달합니다</li>
-        <li>관리자가 GitHub 저장소에 키를 등록하면 앱을 다시 시작합니다</li>
+        <li>관리자가 키를 등록하면 앱을 다시 시작합니다</li>
         <li>인증 완료 후 메인 화면으로 진입합니다</li>
       </ol>
 
@@ -320,14 +320,14 @@
         </tr>
         <tr>
           <td>Outscraper API 키</td>
-          <td>구글 리뷰 수집</td>
+          <td>리뷰 수집</td>
           <td>
             <a href="https://outscraper.com" target="_blank">outscraper.com</a>에서 회원가입 후 API 키 발급
           </td>
         </tr>
         <tr>
           <td>Claude AI API 키</td>
-          <td>악성 리뷰 AI 분석</td>
+          <td>리뷰 AI 분석</td>
           <td>
             <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a>에서 API 키 발급
           </td>
@@ -584,7 +584,7 @@
         <tr>
           <td>네이버</td>
           <td>페이지 수 (1~5)</td>
-          <td>1페이지 (약 20개 리뷰)</td>
+          <td>1페이지 (약 50개 리뷰)</td>
         </tr>
         <tr>
           <td>카카오</td>
@@ -600,7 +600,7 @@
 
       <div class="info-box warning">
         <strong>주의</strong>
-        구글 리뷰는 Outscraper API를 사용하므로 사용량에 따라 과금됩니다. 수집 개수가 많을수록 비용이 증가합니다.
+        구글 리뷰는 Outscraper API를 사용하므로 사용량에 따라 과금됩니다. 수집 개수와 무관하게 1번 호출시 비용이 발생 합니다.
       </div>
 
       <h3 id="outscraper-settings">7.2 Outscraper API 설정</h3>
@@ -642,8 +642,6 @@
             <li><strong>Opus 4.5</strong>: 최고 성능, 가장 정확하지만 가장 비쌈</li>
           </ul>
         </li>
-        <li><strong>Max Tokens</strong>: AI 응답 최대 길이 (기본값: 1024)</li>
-        <li><strong>동시 분석 개수</strong>: 병렬 처리할 리뷰 개수 (1~20, 기본값: 5)</li>
       </ul>
 
       <div class="info-box">
@@ -696,7 +694,7 @@
       <h4>알림 발송 조건</h4>
       <p>다음 조건을 <strong>모두</strong> 만족할 때 Slack 알림이 발송됩니다:</p>
       <ol>
-        <li>리뷰 수집 및 AI 분석 완료</li>
+        <li>(거래처 단위) 리뷰 수집 및 AI 분석 완료</li>
         <li>악성 리뷰가 1건 이상 감지됨</li>
         <li>Webhook URL이 올바르게 설정됨</li>
       </ol>
@@ -839,14 +837,7 @@
         <li>AI 프롬프트를 커스터마이징하고 싶을 때</li>
       </ul>
 
-      <h3>Q. 데이터는 어디에 저장되나요?</h3>
-      <p><strong>A.</strong> 모든 데이터는 사용자 폴더에 저장됩니다:</p>
-      <code>C:\Users\[사용자명]\AppData\Roaming\group-d-review-risk-monitor</code>
-      <ul>
-        <li><code>database.sqlite</code>: 거래처, 리뷰, 지식 DB 데이터</li>
-        <li><code>settings.json</code>: 앱 설정 (스케줄, 테마 등)</li>
-        <li>API 키: Windows 자격증명 관리자 (별도 암호화 저장)</li>
-      </ul>
+      
     </section>
 
   </main>
